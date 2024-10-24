@@ -3,14 +3,14 @@
   <!-- badges: end -->
 
 
-# Linear Regression Function
+# Four package
 
 In this package, we create a package to handle linear regression models. 
 We use the QR decomposition to create the most basic functionality in the R package and implement the results as an S3 class.
 We also implement an object oriented system to handle special functions such as print(), plot(), resid(), pred(), coef() and summary().
 
 
-## install
+## install package
 
 devtools::install_github("qinxia123/four")
 
@@ -28,16 +28,16 @@ lin_obj <- linreg(Petal.Length ~ Sepal.Width + Sepal.Length, data = iris)
 
 print(lin_obj)
 
-## ggplot2
+## plot
 
 plot(lin_obj)
 
-## the vector of residuals eˆ
+## the vector of residuals e_hat
 
 resid(lin_obj)
 
 
-## the predicted values yˆ
+## the predicted values y_hat
 
 pred(lin_obj)
 
@@ -46,7 +46,7 @@ pred(lin_obj)
 
 coef(lin_obj)
 
-## present the coefficients with their standard error, t-value and p-value as well as the estimate of σˆ and the degrees of freedom
+## present the coefficients with their standard error, t-value and p-value as well as the estimate of σ_hat and the degrees of freedom
 
 summary(lin_obj)
 

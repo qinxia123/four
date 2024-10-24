@@ -3,39 +3,18 @@
   <!-- badges: end -->
 
 
-#' Linear Regression Function
+# Linear Regression Function
 
+In this package, we create a package to handle linear regression models. 
+We use the QR decomposition to create the most basic functionality in the R package and implement the results as an S3 class.
+We also implement an object oriented system to handle special functions such as print(), plot(), resid(), pred(), coef() and summary().
 
-#' This function performs multiple linear regression using ordinary least squares and returns an object of class 'linreg' containing various statistics.
-
-
-#' @param formula A formula specifying the model to be fitted (e.g., y ~ x1 + x2).
-
-#' @param data A data frame containing the variables in the model.
-
-#' @return An object of class 'linreg' containing the following statistics:
-
-#'   coefficients for Estimated coefficients for the regression model.
-
-#'   Fitted values from the regression.
-
-#'   Residuals difference between observed and fitted values.
-
-#'   Degrees of freedom for the regression.}
-
-#'   residual_variance for Estimated variance of the residuals.
-
-#'   variance_coefficients for Variance of the regression coefficients.
-
-#'   t-values for each coefficient.
-
-#'   p-values for each coefficient.
 
 ## install
 
 devtools::install_github("qinxia123/four")
 
-## example
+## load package
 
 library(Four)
 

@@ -1,0 +1,19 @@
+Encoding: UTF-8
+Package: Four
+Type: Package
+Title: linear regression function
+Version: 1.0
+Date: 2024-09-30
+Author: c(person("Quanlin", "Ren", email = "renqu711@student.liu.se"),person("Qinxia", "Zhang", email = "qinzh916@student.liu.se"))
+Maintainer: Quanlin Ren <renqu711@student.liu.se>
+Description: This function performs multiple linear regression and returns an object of class 'linreg'.
+License: GPL-3
+RoxygenNote: 7.3.2
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Imports: stats, ggplot2, gridExtra
+VignetteBuilder: knitr
+

@@ -1,0 +1,70 @@
+---
+title: "Introduction to four"
+author: "Quanlin Ren, Qinxia Zhang"
+date: "2024-10-17"
+output: 
+  rmarkdown::html_vignette:
+    toc: true
+    number_sections: true
+vignette: >
+  %\VignetteIndexEntry{Introduction to four} 
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# Overview
+
+In this package, we create a package to handle linear regression models. 
+
+We use the QR decomposition to create the most basic functionality in the R package and implement the results as an S3 class.
+
+We also implement an object oriented system to handle special functions such as print(), plot(), resid(), pred(), coef() and summary().
+
+# Installing and Loading the Package
+
+## load package
+
+library(Four)  
+
+## Load data
+
+data(iris)
+
+## Perform linear regression
+
+lin_obj <- linreg(Petal.Length ~ Sepal.Width + Sepal.Length, data = iris)
+
+### print out the coefficients and coefficient names
+
+print(lin_obj)
+
+### ggplot2
+
+plot(lin_obj)
+
+### the vector of residuals eˆ
+
+resid(lin_obj)
+
+
+###  the predicted values yˆ
+
+pred(lin_obj)
+
+
+### the coefficients as a named vector.
+
+coef(lin_obj)
+
+### present the coefficients with their standard error, t-value and p-value as well as the estimate of σˆ and the degrees of freedom
+
+summary(lin_obj)
+
+
+
+
+
+
+
+
+

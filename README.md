@@ -26,13 +26,38 @@ devtools::install_github("qinxia123/four")
 #example
 library(Four)
 
-# 示例数据
-data <- data.frame(x1 = rnorm(100), x2 = rnorm(100), y = rnorm(100))
+# load data
+data(iris)
+lin_obj <- linreg(Petal.Length ~ Sepal.Width + Sepal.Length, data = iris)
 
-# 运行线性回归
-model <- linreg(y ~ x1 + x2, data = data)
+### print out the coefficients and coefficient names
 
-# 查看模型摘要
-summary(model)
+print(lin_obj)
+
+### ggplot2
+
+plot(lin_obj)
+
+### the vector of residuals eˆ
+
+resid(lin_obj)
+
+
+###  the predicted values yˆ
+
+pred(lin_obj)
+
+
+### the coefficients as a named vector.
+
+coef(lin_obj)
+
+### present the coefficients with their standard error, t-value and p-value as well as the estimate of σˆ and the degrees of freedom
+
+summary(lin_obj)
+
+
+
+
 
 

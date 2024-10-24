@@ -31,39 +31,43 @@
 
 #'   p-values for each coefficient.
 
-#install
+## install
+
 devtools::install_github("qinxia123/four")
 
-#example
+## example
+
 library(Four)
 
-# load data
+## load data
+
 data(iris)
+
 lin_obj <- linreg(Petal.Length ~ Sepal.Width + Sepal.Length, data = iris)
 
-### print out the coefficients and coefficient names
+## print out the coefficients and coefficient names
 
 print(lin_obj)
 
-### ggplot2
+## ggplot2
 
 plot(lin_obj)
 
-### the vector of residuals eˆ
+## the vector of residuals eˆ
 
 resid(lin_obj)
 
 
-###  the predicted values yˆ
+## the predicted values yˆ
 
 pred(lin_obj)
 
 
-### the coefficients as a named vector.
+## the coefficients as a named vector.
 
 coef(lin_obj)
 
-### present the coefficients with their standard error, t-value and p-value as well as the estimate of σˆ and the degrees of freedom
+## present the coefficients with their standard error, t-value and p-value as well as the estimate of σˆ and the degrees of freedom
 
 summary(lin_obj)
 
